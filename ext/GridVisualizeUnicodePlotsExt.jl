@@ -641,6 +641,8 @@ function vectorplot!(ctx, TP::Type{UnicodePlotsType}, ::Type{Val{2}}, grid, func
     return reveal(ctx, TP)
 end
 
+vectorplot!(ctx, TP::Type{UnicodePlotsType}, ::Type{Val{3}}, grid, func) = missing_figure!(ctx, TP, "vectorplot! (3D)", not_implemented = true)
+
 streamplot!(ctx, TP::Type{UnicodePlotsType}, ::Type{Val{2}}, grid, func) = missing_figure!(ctx, TP, "streamplot! (2D)", not_implemented = true)
 
 # placeholder for missing/not implemented
